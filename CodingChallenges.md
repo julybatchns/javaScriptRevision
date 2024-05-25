@@ -4,13 +4,19 @@
 
 # Note:- Following Components must be Mobile Responsive
 
-#1. Star Rating Component.
-#2. Header with multiple dropdowns.
-#3. Carousel.
-#4. Pagination.
-#5. Dropdown with Search Filter Functionality.
-#6. Accordion.
-#7. Simple App:-
+## 1. Star Rating Component.
+
+## 2. Header with multiple dropdowns.
+
+## 3. Carousel.
+
+## 4. Pagination.
+
+## 5. Dropdown with Search Filter Functionality.
+
+## 6. Accordion.
+
+## 7. Simple App:-
 
 1. Create a table with 2 columns as "Title" and "Id"
    and render 10 records at a time.
