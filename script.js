@@ -324,14 +324,368 @@
 
 // console.log(reverseString("Abhishek"));
 
-function x() {
-  var a = 7;
-  function y() {
-    console.log(a);
-  }
+// function x() {
+//   var a = 7;
+//   function y() {
+//     console.log(a);
+//   }
 
-  return y;
+//   return y;
+// }
+
+// var z = x(); // var z = y // var z = function y() {console.log(a)}
+// console.log(z());
+
+// b();
+// var a = 10;
+// var b = function () {
+//   console.log(a);
+// };
+// b();
+
+// Closures
+
+// Function bundled along with it's lexical scope is closure.
+
+// function x() {
+//   var a = 7;
+//   function y() {
+//     console.log(a);
+//   }
+//   return y;
+// }
+// var z = x();
+// console.log(z());
+
+// function z() {
+//   var b = 900;
+//   function x() {
+//     var a = 7;
+//     function y() {
+//       console.log(a, b);
+//     }
+//     y();
+//   }
+//   x();
+// }
+
+// z();
+
+// Advantages of Closures
+// ? 1. Module Design Pattern.
+// ? 2. Currying
+// ? 3. Memoization.
+// ? 4. Data Hiding & Encapsulation.
+// ? 5. setTimeouts.
+
+// ? 1. Module Design Pattern.
+
+// JS File: - Auth.js
+// const authModule = (function () {
+//   let loggedInUser = null;
+
+//   function login(username, password) {
+//     loggedInUser = username;
+//   }
+
+//   function logout() {
+//     loggedInUser = null;
+//   }
+
+//   function getUserInfo() {
+//     return loggedInUser;
+//   }
+
+//   return {
+//     login,
+//     logout,
+//     getUserInfo,
+//   };
+// })();
+
+// authModule.login("Shubham", "newtonSchool");
+
+// ? 2. Currying
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+// console.log(add(4, 5));
+
+// function curriedAdd(x) {
+//   return function (y) {
+//     return x + y;
+//   };
+// }
+
+// const addTwo = curriedAdd(2); // 2 + function (y) {return x + y;};
+// console.log(addTwo(3)); // 2 + 3
+
+// parameters, variables, function,etc.
+
+// function calculateTotalPrice(taxRate) {
+//   return function (price) {
+//     return price + price * (taxRate / 100);
+//   };
+// }
+
+// const calculateTotalPrice = (taxRate) => (price) =>
+//   price + price * (taxRate / 100);
+
+// const calculateSalesTax = calculateTotalPrice(8);
+// const totalPrice = calculateSalesTax(100);
+// console.log(totalPrice);
+
+// ? 5. setTimeouts.
+
+// function showMessage(message, delay) {
+//   setTimeout(() => {
+//     console.log(message);
+//   }, delay);
+// }
+
+// showMessage("Hello July Batch", 3000);
+
+// Tricky Questions
+
+// function x() {
+//   for (var i = 1; i <= 8; i++) {
+//     setTimeout(() => {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+//   console.log("Closures Learning!");
+// }
+
+// x();
+
+// 1. Continue with Closure
+// 2. Functions
+// 3. Callbacks
+// 4. JavaScript Event Loop
+// 5. Coding Challenges
+
+// function outer() {
+//   var a = 10;
+//   function inner() {
+//     console.log(a);
+//   }
+//   return inner;
+// }
+// outer()();
+
+// function outer() {
+//   var a = 10;
+//   function inner() {
+//     console.log(a);
+//   }
+//   return inner;
+// }
+// outer()();
+
+// function outer() {
+//   var a = 10;
+//   function inner() {
+//     console.log(a);
+//   }
+//   return inner;
+// }
+// outer()();
+
+// Will inner function have the access to outer function argument?
+// function outer(str) {
+//   let a = 10;
+//   function inner() {
+//     console.log(a, str);
+//   }
+//   return inner;
+// }
+// outer("Hello There")();
+
+// function outest() {
+//   var c = 20;
+//   function outer(str) {
+//     let a = 10;
+//     function inner() {
+//       console.log(a, c, str);
+//     }
+//     return inner;
+//   }
+//   return outer;
+// }
+// let a = 100;
+// outest()("Hello There")();
+
+// Functions in JavaScript
+
+// Function is a machine which takes an Input and returns you back an Output
+
+// function solveME(num) {
+//   return num + 2;
+// }
+
+// solveME(3); // 5
+
+// What is Function Statement or Function Declaration?
+// Normal or Regular Functions
+
+// function a() {
+//   console.log("This is called a function statement.");
+// }
+
+// a();
+
+// What is Function Expression?
+// Anonymous Function
+// var b = function () {
+//   console.log("Hello, I am a Anonymous Function.");
+// };
+// Arrow Function
+// var b = () => {
+//   console.log("Hello, I am a Anonymous Function.");
+// };
+
+// Differnce between Function Statement and Function Expression
+// 1. Hoisting
+
+// var a = 2;
+
+// vikas();
+
+// function vikas() {
+//   console.log("I am learning");
+// }
+
+// var hemant = function () {
+//   console.log("Hello, me as Hemant");
+// };
+// hemant();
+
+// function() {
+
+// }
+
+// Named Function Expression
+
+// var abhishek = function mayank() {
+//   console.log("We are almost there!");
+// };
+
+// abhishek();
+// mayank();
+
+var b = function (a, c) {
+  //1
+  console.log(a, c);
+};
+
+b(2, 4); // 2
+
+// ! What is First Class Function aka First Class Citizens?
+// * We can pass functions inside a function as arguments and /or return a function(HOF). These ability are altogether known as First class function. It is programming concept available in some other languages too.
+
+// var abc = function (param1) {
+//   console.log(param1);
+// };
+// abc(function () {});
+
+// Write a function that takes an array of numbers and returns the largest number.
+
+// function findLargestNumber(arr) {
+//   return Math.max(...arr);
+// }
+
+// console.log(findLargestNumber([2, 44, 56, 23, 999, 34567, 12]));
+
+// function greet(name, callback) {
+//   console.log("Hello " + name);
+//   callback();
+// }
+
+// function sayGoodbye() {
+//   console.log("GoodBye!");
+// }
+
+// greet("Vikas", sayGoodbye);
+
+// function showMessage() {
+//   console.log("This message is shown after 2 seconds");
+// }
+
+// setTimeout(showMessage, 2000);
+
+// document.getElementById("myButton").addEventListener("click", function () {
+//   alert("Button was clicked!");
+// });
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// let squaredNumbers = numbers.map(function (number) {
+//   return number * number;
+// });
+
+// console.log(squaredNumbers);
+
+// Asynchronous Callback Chain with Arguments
+
+// function firstFunction(callback) {
+//   console.log("First Function is Executing...");
+//   setTimeout(function () {
+//     const data = "Data from firstFunction";
+//     console.log("Asynchronous operation in first function is done.");
+//     callback(data);
+//   }, 1000);
+// }
+
+function firstFunction() {
+  console.log("First function is executing.");
+  return new Promise((resolve) => {
+    setTimeout(function () {
+      const data = "Data from firstFunction";
+      console.log("Asynchronous operation in first function is done.");
+      resolve(data);
+    }, 1000);
+  });
 }
 
-var z = x(); // var z = y // var z = function y() {console.log(a)}
-console.log(z());
+// function secondFunction(data, callback) {
+//   console.log("Second Function is Executing..." + data);
+//   setTimeout(function () {
+//     const moreData = data + "Data from secondFunction";
+//     console.log("Asynchronous operation in second function is done.");
+//     callback(moreData);
+//   }, 1000);
+// }
+
+function secondFunction(data) {
+  console.log("Second function received:", data);
+  return new Promise((resolve) => {
+    setTimeout(function () {
+      const moreData = data + " and data from secondFunction";
+      console.log("Asynchronous operation in second function is done.");
+      resolve(moreData);
+    }, 1000);
+  });
+}
+
+function thirdFunction(finalData) {
+  console.log("Third function recieved", finalData);
+}
+
+// firstFunction(function (dataFromFirst) {
+//   secondFunction(dataFromFirst, function (dataFromSecond) {
+//     thirdFunction(dataFromSecond);
+//   });
+// });
+
+firstFunction()
+  .then((dataFromFirst) => {
+    return secondFunction(dataFromFirst);
+  })
+  .then((dataFromSecond) => {
+    thirdFunction(dataFromSecond);
+  })
+  .catch((error) => {
+    console.error("erro", error);
+  });

@@ -1,26 +1,35 @@
-<!-- JavaScript Revision Drill -->
+  <!-- JavaScript Revision Drill -->
 
-#1. Execution Context.
-#2. Hoisting.
-#3. Window - a global Object.
-#4. this keyword in JS.
-#5. undefined and not defined.
-#6. Error:- Type, Syntax and Reference.
-#7. Error Handling:- try, catch and finally.
-#8. Scopes.
-#9. Scope Chain and Lexical Environment.
-#10. Block Scope and Shadowing.
-#11. Starting with Closure.
+  #1. Execution Context.
+  #2. Hoisting.
+  #3. Window - a global Object.
+  #4. this keyword in JS.
+  #5. undefined and not defined.
+  #6. Error:- Type, Syntax and Reference.
+  #7. Error Handling:- try, catch and finally.
+  #8. Scopes.
+  #9. Scope Chain and Lexical Environment.
+  #10. Block Scope and Shadowing.
+  #11. Starting with Closure.
 
-<!-- Upcoming Topics -->
+  <!-- Upcoming Topics -->
 
-#12. Understanding Closures.
-#13. Types of Functions.
-#14. Callback Functions with Event Listeners.
-#15. Asynchronous JavaScript.
-#16. Event Loop.
-#17. JS Engine & V8 Engine Architecture.
-#18. more to come...
+  #12. Understanding Closures.
+  #13. Types of Functions.
+  #14. Callback Functions with Event Listeners.
+  #15. Asynchronous JavaScript.
+  #16. Event Loop.
+  #17. JS Engine & V8 Engine Architecture.
+  #18. more to come...
+
+
+  <!-- Today's Topics -->
+
+  #1. Hoisting - let/const.
+  #2. Error.
+  #3. Closure.
+  #4. SetTimeout.
+  #5. Functions.
 
 // # Preparing for a JavaScript interview, especially when coding challenges are involved, requires a solid understanding of various concepts and the ability to solve problems efficiently. Below is a comprehensive guide to help you prepare for JavaScript coding challenges in interviews.
 
