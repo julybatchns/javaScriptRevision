@@ -1,7 +1,8 @@
-<!-- JS Coding Challenges -->
+# JS Coding Challenges
 
-<!-- Simple UI Components (by using Vanilla JavaScript) -->
-<!-- Note:- Following Components must be Mobile Responsive -->
+# Simple UI Components (by using Vanilla JavaScript)
+
+# Note:- Following Components must be Mobile Responsive
 
 #1. Star Rating Component.
 #2. Header with multiple dropdowns.
